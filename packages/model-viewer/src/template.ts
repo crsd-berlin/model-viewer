@@ -61,6 +61,8 @@ canvas {
    * @see https://github.com/GoogleWebComponents/model-viewer/pull/755#issuecomment-536597893
    */
   transform: translateZ(0);
+  /** FIX: prevent blue outline on canvas, on focus/grabbing */
+  outline:none;
 }
 
 canvas.show {
