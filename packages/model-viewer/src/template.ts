@@ -62,7 +62,7 @@ canvas {
    */
   transform: translateZ(0);
   /** FIX: prevent blue outline on canvas, on focus/grabbing */
-  outline:none;
+  outline: none;
 }
 
 canvas.show {
