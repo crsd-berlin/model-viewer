@@ -16,6 +16,7 @@
 const resolve = require('rollup-plugin-node-resolve');
 const replace = require('rollup-plugin-replace');
 const cleanup = require('rollup-plugin-cleanup');
+const { terser } = require('rollup-plugin-terser');
 const {NODE_ENV} = process.env;
 
 const onwarn = (warning, warn) => {
@@ -48,7 +49,8 @@ if (NODE_ENV !== 'development') {
     // ~45kb in filesize alone... but takes 2 minutes to build
     include: ['lib/**'],
     comments: 'none',
-  }));
+  }),
+  terser());
 
   outputOptions.push(
       {
